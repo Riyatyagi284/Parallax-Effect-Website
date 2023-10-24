@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.wrapper {
+    height: 100vh;
+    /* for 3D transform */
+    perspective: 10px;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    /* for creating visual appearing farthest distance */
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container>h1 {
+    text-align: center;
+    font-size: 10rem;
+    color: white;
+    letter-spacing: 4px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    background: rgb(45, 45, 45);
+    color: #fff;
+    padding: 5rem 0;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg1 {
+    background-image: url("./images/sport-1.jpg");
+}
+
+.bg2 {
+    background-image: url("./images/sport-2.jpg");
+}
+
+.bg3 {
+    background-image: url("./images/sport-3.jpg");
+}
+
+.desc {
+    color: #000;
+    background: #fff;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-weight: 600;
+    width: fit-content;
+    margin: auto;
+    padding: 0.5rem 2.5rem;
+    position: relative;
+    top: 45%;
+}
+
+section>h2 {
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+/* ########### RESPONSIVE DESIGNING ############## */
+
+@media (max-width:1100px) {
+    .container>h1 {
+        font-size: 6.6rem;
+        padding-top: 2rem;
+    }
+    section>h2 {
+        font-size: 4.66rem;
+        padding: 0.6rem 3rem;
+    }
+
+    .text {
+        padding: 0.6rem 3rem;
+    }
+}
+
+@media (max-width:768px) {
+    .container>h1 {
+        font-size: 4.4rem;
+        padding-top: 4rem;
+    }
+    section>h2 {
+        font-size: 3.66rem;
+        padding: 0.6rem 3rem;
+    }
+}
+
+@media (max-width:500px) {
+    .container>h1 {
+        font-size: 2rem;
+        padding-top: 6rem;
+    }
+
+    section>h2 {
+        font-size: 2.66rem;
+        padding: 0.6rem 3rem;
+    }
+}
